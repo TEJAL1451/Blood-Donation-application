@@ -1,0 +1,50 @@
+/* Feedback List Styles */
+.feedback-list-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.feedback-list-container h2 {
+  margin-bottom: 1.5rem;
+  color: var(--heading-color);
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.feedback-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.no-feedback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 3rem;
+  text-align: center;
+  color: var(--text-secondary);
+  background-color: var(--card-bg);
+  border-radius: 0.5rem;
+  box-shadow: var(--card-shadow);
+}
+
+.feedback-loading,
+.feedback-error {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-color);
+}
+
+.feedback-error {
+  color: var(--error-color);
+}
+
+@media (max-width: 768px) {
+  .feedback-list {
+    grid-template-columns: 1fr;
+  }
+}
